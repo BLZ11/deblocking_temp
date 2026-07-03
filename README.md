@@ -1,4 +1,4 @@
-# Supporting Data: Physics-Informed Descriptors Enable Machine Learning in Data-Sparse Chemical Systems
+# Supporting Data: Bond Energy Descriptors Enable Machine Learning with Limited Data: Design of Capping Agents for Thermoplastic Polyurethane Recycling
 
 Code, data, and Jupyter notebooks that accompany:
 
