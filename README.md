@@ -4,8 +4,8 @@ Code, data, and Jupyter notebooks that accompany:
 
 > Rafiq, R.; Zulueta, B.; Zucco, H.; Suresh, R.; Shoemaker, J. E.; Call, M.;
 > Sheppard, D.; Cormack, G.; Keith, J. A.; Veser, G.
-> *Physics-Informed Descriptors Enable Machine Learning in Data-Sparse Chemical Systems.*
-> Nature Chemistry (2026, under review).
+> *Bond Energy Descriptors Enable Machine Learning with Limited Data: Design of Capping Agents for Thermoplastic Polyurethane Recycling.*
+> (2026, under review).
 
 This repository covers the full pipeline used in the paper: extracting bond
 energy (BEBOP) and quantum mechanical descriptors from Gaussian 16 outputs,
@@ -202,16 +202,16 @@ Until then, please cite as a manuscript in review:
   author       = {Rafiq, Remsha and Zulueta, Barbaro and Zucco, Hannah and
                   Suresh, Ramakrishna and Shoemaker, Jason E. and Call, Michael and
                   Sheppard, Daylan and Cormack, Glenn and Keith, John A. and Veser, Götz},
-  title        = {Physics-Informed Descriptors Enable Machine Learning in Data-Sparse Chemical Systems},
+  title        = {Bond Energy Descriptors Enable Machine Learning with Limited Data: Design of Capping Agents for Thermoplastic Polyurethane Recycling},
   year         = {2026},
-  note         = {Under review}
+  note         = {under review}
 }
 
 @dataset{Rafiq2026zenodo,
   author       = {Rafiq, Remsha and Zulueta, Barbaro and Zucco, Hannah and
                   Suresh, Ramakrishna and Shoemaker, Jason E. and Call, Michael and
                   Sheppard, Daylan and Cormack, Glenn and Keith, John A. and Veser, Götz},
-  title        = {Supporting Data: Physics-Informed Descriptors Enable Machine Learning in Data-Sparse Chemical Systems},
+  title        = {Supporting Data: Bond Energy Descriptors Enable Machine Learning with Limited Data: Design of Capping Agents for Thermoplastic Polyurethane Recycling},
   year         = {2026},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.17883052},
