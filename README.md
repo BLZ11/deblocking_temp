@@ -30,8 +30,9 @@ leave-one-out cross-validation to predict the deblocking temperature
 
 Two external resources are required to reproduce the work from raw inputs.
 
-- **Gaussian 16 output files** (~409 MB compressed, ~5.3 GB extracted) are
-  archived on Zenodo at https://doi.org/10.5281/zenodo.17883052. They contain
+- **Gaussian 16 output files** are archived on Zenodo at
+  https://doi.org/10.5281/zenodo.22718643 (version 2, which adds the NBO
+  analyses; version 1, 10.5281/zenodo.17883052, lacks them). They contain
   geometry optimizations at B3LYP-D3/6-31G\*, B3LYP-D3/CBSB7, and G4MP2 for
   every capping agent and MDI-capped adduct, ROHF/CBSB3 single-point energies
   with the MinPop orbital populations used by BEBOP and by the MinPop control
@@ -108,7 +109,7 @@ pip install -e ./bebop-qc
 # From the deblocking_temp/ directory
 mkdir -p zenodo_data
 cd zenodo_data
-wget https://zenodo.org/records/17883052/files/gaussian.tar.gz
+wget https://zenodo.org/records/22718643/files/gaussian.tar.gz
 tar -xzf gaussian.tar.gz
 cd ..
 ```
@@ -227,7 +228,7 @@ and `FEATURE_COLS_NO_BEBOP` lists.
   [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
 
 If you reuse this code or data, please cite the manuscript above and the
-Zenodo deposit (DOI 10.5281/zenodo.17883052).
+Zenodo deposit (DOI 10.5281/zenodo.22718643).
 
 ## Citation
 
@@ -251,8 +252,8 @@ Until then, please cite as a manuscript in review:
   title        = {Supporting Data: Bond Energy Descriptors Enable Machine Learning with Limited Data: Design of Capping Agents for Thermoplastic Polyurethane Recycling},
   year         = {2026},
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.17883052},
-  url          = {https://doi.org/10.5281/zenodo.17883052}
+  doi          = {10.5281/zenodo.22718643},
+  url          = {https://doi.org/10.5281/zenodo.22718643}
 }
 ```
 
