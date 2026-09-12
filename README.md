@@ -122,7 +122,7 @@ zenodo_data/
     ├── b3lyp_cbsb7/   # B3LYP-D3/CBSB7 geometries + ROHF/CBSB3 single points (MinPop populations)
     ├── b3lyp_631g*/   # B3LYP-D3/6-31G* geometries
     ├── g4mp2/         # G4MP2 thermochemistry for deprotonation
-    └── nbos/          # NBO 7 analyses at ROHF/CBSB3, one directory per structure
+    └── nbos/          # NBO 7 analyses at ROHF/CBSB3, one <name>_CBSB3_nbo.out per structure
 ```
 
 #### 3. Run the descriptor notebook
