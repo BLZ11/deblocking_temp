@@ -10,7 +10,7 @@ Code, data, and Jupyter notebooks that accompany:
 This repository covers the full pipeline used in the paper: extracting bond
 energy (BEBOP) and quantum mechanical descriptors from Gaussian 16 outputs,
 augmenting them with RDKit geometric descriptors and with natural bond orbital
-(NBO) and minimal-basis (MinPop) population descriptors, and training six
+(NBO) and minimal basis (MinPop) population descriptors, and training six
 regression models (LASSO, Ridge, ordinary least squares, Random Forest,
 Gaussian Process Regression, Gradient Boosting) under a fully nested
 leave-one-out cross-validation to predict the deblocking temperature
@@ -43,7 +43,7 @@ Two external resources are required to reproduce the work from raw inputs.
 
 ## Two ways to reproduce
 
-The shortest route uses the already-tabulated descriptors in the Excel file
+The shortest route uses the already tabulated descriptors in the Excel file
 and only runs the ML notebook. The full route regenerates the descriptors
 from the raw Gaussian outputs on Zenodo.
 
@@ -141,14 +141,14 @@ DATA_PATH = Path("./zenodo_data")   # or the absolute path on your system
 
 The notebook then sequentially:
 
-1. defines the resonance-bond table for each compound,
+1. defines the resonance bond table for each compound,
 2. runs BEBOP-1 to compute bond energies, hybridization energies, and resonance energies,
 3. computes Domingo's nucleophilicity index $N$ and HOMO-LUMO gaps from the B3LYP/CBSB7 single points,
 4. computes the gas-phase deprotonation enthalpy at G4MP2,
 5. extracts XYZ coordinates,
 6. computes RDKit-based radius of gyration $R_G$ and molar volume $V$,
 7. reads the NBO (Wiberg bond indices, natural 2s populations) and MinPop
-   (minimal-basis bond orders and 2s populations) descriptors from the
+   (minimal basis bond orders and 2s populations) descriptors from the
    ROHF/CBSB3 outputs,
 8. exports the consolidated descriptor table.
 
@@ -175,9 +175,9 @@ writes the following figures alongside the notebook:
 Numerical outputs in the notebook include the nested cross-validation ladder
 (selection, scaler, and penalty leakage closed one at a time), selection
 stability across folds, the LASSO equation in standardized features, the
-training, nested LOOCV, and external-set errors (RMSE, R², MAE) for every
-model, effective parameter counts and AIC/BIC values, held-out external test
-predictions, leverage and applicability-domain summaries, paired t-test
+training, nested LOOCV, external set errors (RMSE, R², MAE) for every
+model, effective parameter counts and AIC/BIC values, held out external test
+predictions, leverage and applicability domain summaries, paired t-test
 statistics, bootstrap 95% confidence intervals on pairwise differences in
 RMSE, and the statistical comparison of the BEBOP, NBO, and MinPop models.
 
@@ -188,15 +188,15 @@ RMSE, and the statistical comparison of the BEBOP, NBO, and MinPop models.
   ensembles, the Gaussian Process kernel optimizer restarts, the bootstrap
   resampling for $\Delta\mathrm{RMSE}$ confidence intervals, the Monte Carlo
   perturbations used for generalized degrees of freedom, and the 100 random
-  subsamples per training-set size used in the learning curves.
+  subsamples per training set size used in the learning curves.
 - Cross-validation is fully nested: descriptor selection (Part A), the
   standardization scaler, and every hyperparameter that depends on
   $T_{\text{deblock}}$ (LASSO and Ridge penalties, Gaussian Process kernel)
   are refit inside each leave-one-out fold. Reported cross-validated errors are
-  therefore higher than a single-pass fit on the same data would give; the
-  training-set errors reported alongside them show that the models did not
+  therefore higher than a single pass fit on the same data would give; the
+  training set errors reported alongside them show that the models did not
   change.
-- Total wall-clock time for `ml_training_stat_test.ipynb` is approximately
+- Total wall clock time for `ml_training_stat_test.ipynb` is approximately
   30 to 45 minutes on a single modern CPU core. No GPU is required.
 - The descriptor notebook is also CPU-bound and runs in approximately 5 to
   10 minutes once the Gaussian and NBO outputs are on disk.
@@ -212,7 +212,7 @@ machine learning step. It includes 21 capping agents:
   extrapolative prediction.
 
 Each row contains the experimental $T_{\text{deblock}}$ (in °C), the
-candidate descriptors from which the eight-descriptor model is selected
+candidate descriptors from which the eight descriptor model is selected
 (five conventional descriptors and the BEBOP gross bond energies,
 hybridization energy, and resonance energy), the NBO and MinPop control
 descriptors (Wiberg bond indices, natural 2s populations, minimal-basis bond
